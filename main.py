@@ -32,8 +32,8 @@ def main(args: argparse.Namespace):
 
     # run pyqt5
     app = QApplication(sys.argv)
-    tracker = KalmanFilterTracker()
-    log_handler(tracker.logger)
+    tracker = KalmanFilterTracker(video_url='/mnt/e/data/4D_CT_basketball/demos/iou_only.mp4')
+    log_handler(tracker.panel.logger)
     app.exec()
 
 if __name__ == "__main__":
